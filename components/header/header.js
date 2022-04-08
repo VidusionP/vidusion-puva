@@ -44,26 +44,32 @@ export default function Header() {
                     <HamburgerCollapse isActive={isOpen} toggleButton={() => setIsOpen(!isOpen)}/>
                 </div>
             </div>
-            <nav className={isOpen?'header__nav active':'header__nav'} >
-                <div>
-                    <div>
+            <nav className={isOpen?'header__nav mobileOpen':'header__nav'} >
+                <div className='header__nav--top'>
+                    <div className='header__nav--top__logo'>
                         <Image src={logo} priority={true}/>
                     </div>
-                    <p>Vidu</p>
-                    <p>Front End Developer</p>
+                    <p className='header__nav--top__name'>Vidu</p>
+                    <p className='header__nav--top__job'>Front End Developer</p>
                 </div>
-                <div>
-                    <ul>
-                        <li>About</li>
-                        <li>My Skills</li>
-                        <li>Work</li>
-                        <li>Blogs</li>
-                        <li>Contact</li>
+                <div className='header__nav--bot'>
+                    <ul className='header__nav--bot__menu'>
+                        <li className='header__nav--bot__menu--list'>About</li>
+                        <li className='header__nav--bot__menu--list'>My Skills</li>
+                        <li className='header__nav--bot__menu--list'>Work</li>
+                        <li className='header__nav--bot__menu--list'>Blogs</li>
+                        <li className='header__nav--bot__menu--list'>Contact</li>
                     </ul>
-                    <div>
-                        <Image src={twitter}/>
-                        <Image src={twitter}/>
-                        <Image src={twitter}/>
+                    <div className='header__nav--bot__soc'>
+                        <div className='header__nav--bot__soc--img'>
+                            <Image src={twitter}/>
+                        </div>
+                        <div className='header__nav--bot__soc--img'>
+                            <Image src={twitter}/>
+                        </div>
+                        <div className='header__nav--bot__soc--img'>
+                            <Image src={twitter}/>
+                        </div>
                     </div>
                 </div>
             </nav>
