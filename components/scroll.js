@@ -25,7 +25,7 @@ export default function Scroll() {
     return function unMount() {
       window.removeEventListener("scroll", onScroll);
     };
-  });
+  },[]);
 
   return (
     <div onClick={scrollTop} className={vidu?'arrow active1':'arrow'}>

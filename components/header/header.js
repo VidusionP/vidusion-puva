@@ -21,10 +21,10 @@ export default function Header() {
         
       };
     useEffect(() => {
-        // console.log(check)
+        console.log("hi")
         // isOpen?document.body.classList.add('fullBody'):document.body.classList.remove('fullBody')
         // isOpen?document.documentElement.classList.add('fullBody'):document.documentElement.classList.remove('fullBody')
-    })
+    },[])
     return (
         <header className='header'>
             <div className='header__top'>

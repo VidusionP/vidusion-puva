@@ -1,11 +1,15 @@
 import Header from "./header/header"
-import Hero from './hero/hero'
+
 import React, { useState, useEffect } from "react";
 // import Footer from './Footer/Footer'
 // import Project from './Project/Project'
 
 import Scroll from './scroll'
-import hero from "./hero/hero";
+
+import Portfolio from './portfolio/portfolio'
+import Hero from './hero/hero'
+import About from './about/about'
+import Script from 'next/script'
 
 
 
@@ -35,9 +39,13 @@ const Layout = ({ children, pageTitle, description, ...props }) => {
 
     return (
         <>  
+            <Script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js" strategy="beforeInteractive"/>
+
             {/* <Scroll/> */}
             <Header/>
             <Hero/>
+            <Portfolio/>
+            <About/>
             {/* {displayChildren} */}
             {/* <Project/>
             <Footer/> */}
