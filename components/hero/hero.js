@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
-import header from '../../public/Head.jpg'
+import header from '../../public/Head.png'
 import down from '../../public/arrowdown.png'
 
 
