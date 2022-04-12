@@ -4,7 +4,7 @@ import head from '../../public/Head.jpg'
 import down from '../../public/arrowdown.png'
 
 
-export default function hero() {
+export default function Hero() {
   return (
     <div>
         <p>&lt;body&gt;</p>

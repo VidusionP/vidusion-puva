@@ -2,7 +2,7 @@ import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
 
-export default function portfolio() {
+export default function Portfolio() {
   return (
     <div>
         <div>
