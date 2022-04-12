@@ -1,9 +1,11 @@
 import Header from "./header/header"
+import Hero from './hero/hero'
 import React, { useState, useEffect } from "react";
 // import Footer from './Footer/Footer'
 // import Project from './Project/Project'
 
 import Scroll from './scroll'
+import hero from "./hero/hero";
 
 
 
@@ -35,9 +37,8 @@ const Layout = ({ children, pageTitle, description, ...props }) => {
         <>  
             {/* <Scroll/> */}
             <Header/>
-            <div>
-                {displayChildren}
-            </div>
+            <Hero/>
+            {/* {displayChildren} */}
             {/* <Project/>
             <Footer/> */}
         </>
