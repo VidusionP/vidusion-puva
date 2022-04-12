@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
-import head from '../../public/Head.jpg'
+import header from '../../public/Head.jpg'
 import down from '../../public/arrowdown.png'
 
 
@@ -10,7 +10,7 @@ export default function Hero() {
         <p>&lt;body&gt;</p>
         <p>&lt;img</p>
         <div>
-            {/* <Image src={head} priority={true}/> */}
+            <Image src={header} priority={true}/>
         </div>
         <p>&gt;</p>
         <p>&lt;h1&gt;</p>
