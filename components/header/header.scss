@@ -45,6 +45,8 @@
         }
         &--slider {
             z-index:111;
+            display:flex;
+            align-items:center;
         }
     }
     &__nav {
