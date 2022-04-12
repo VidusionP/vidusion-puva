@@ -16,7 +16,7 @@ export default function hero() {
         <p>&lt;h1&gt;</p>
         <div>
             <p>Hi,</p>
-            <p>I'm Vidu,</p>
+            <p>I&apos;m Vidu,</p>
             <p>Web Developer</p>
         </div>
         <p>&lt;h1/&gt;</p>

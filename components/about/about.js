@@ -19,15 +19,15 @@ export default function about() {
 
     useEffect(() => {
 
-        var tagCloud = TagCloud('.content', myTags,{
+       TagCloud('.content', myTags,{
 
             // radius in px
-            // radius: 300,
+            radius: 150,
           
             // animation speed
             // slow, normal, fast
-            maxSpeed: 'fast',
-            initSpeed: 'fast',
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
           
             // 0 = top
             // 90 = left
@@ -39,7 +39,7 @@ export default function about() {
             keep: true
           
           }); 
-          console.log('i fire once');
+
       } ,[])
   return (
     <>

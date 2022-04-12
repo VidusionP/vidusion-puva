@@ -1,22 +1,27 @@
 import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Map from '../map.js'
+
 
 export default function Contact() {
   return (
     <div>
-        <span>Blogs </span>
-        <h1>Blogs</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Sapiente eaque suscipit, id veritatis saepe animi non, 
-            tempore dolores doloremque odit reprehenderit temporibus ex 
-            autem odio expedita dicta voluptate numquam fuga!
+        <h1>Contact Me</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Laboriosam facere fugiat facilis ducimus minus
+              voluptatum dicta temporibus suscipit, 
+            est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
         </p>
-        <div>
-            <p>WEB DEVELOPMENT</p>
-            <h3>Fundamentals of HTML5 & CSS3</h3>
-            <p>Hypertext markup language (HTML) structures documents such as web pages by...</p>
-        </div>
+        <form>
+            <TextField id="name" label="Name" fullWidth autocomplete="none" variant="filled" />
+            <TextField id="email" label="Email" fullWidth autocomplete="none" variant="filled" />
+            <TextField id="subject" label="Subject" fullWidth autocomplete="none" variant="filled" />
+            <TextField id="message" label="Message" variant="filled" multiline rows={5} fullWidth autocomplete="none"/>
+        </form>
+        <Button className='test' variant="outlined">Send Message</Button>
+        {/* <Map/> */}
     </div>
   )
 }
