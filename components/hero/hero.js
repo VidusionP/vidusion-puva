@@ -19,25 +19,35 @@ export default function Hero() {
         <div className='hero__title'>
             <p className='hero__title--line'>Hi,</p>
             <p className='hero__title--line'>I&apos;m  
-            <div className='hero__title--img'>
+            <span className='hero__title--img'>
                 <Image priority={true} src={V}/>
-            </div>idu,</p>
+            </span>idu,</p>
             <p className='hero__title--line'>Web Developer</p>
         </div>
         <p className='html1'>&lt;/h1&gt;</p>
         <p className='html'>&lt;p&gt;</p>
-        <p>FRONT END DEVELOPER</p>
-        <p className='html1'>&lt;/p&gt;</p>
-        <Button className='test' variant="outlined">Contact me</Button>
+        <p className='hero__sub'>FRONT END DEVELOPER</p>
+        <p className='html'>&lt;/p&gt;</p>
+        <Button className='contact__button'  variant="outlined">Contact me</Button>
         <div className='hero__bot'>
-            <div className='hero__bot--scroll'>Scroll Down 
-                <Image src={down} priority={true}/>
+            <div className='hero__bot--scroll'>
+                <span>Scroll Down</span>
+                <div className='hero__bot--scroll__arr'>
+                    <Image src={down} priority={true}/>
+                </div>
+                
             </div>
             <div className='hero__bot--mid'>
                 <Image src={down} priority={true}/>
             </div>
-            <div className='hero__bot--scroll side'>Scroll Down 
-                <Image src={down} priority={true}/>
+            <div className='hero__bot--scroll side'>
+                <span>
+                    Scroll Down
+                </span> 
+                <div className='hero__bot--scroll__arr'>
+
+                    <Image src={down} priority={true}/>
+                </div>
             </div>
         </div>
     </div>
