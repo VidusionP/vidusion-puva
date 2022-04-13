@@ -22,12 +22,12 @@ export default function About() {
        TagCloud('.content', myTags,{
 
             // radius in px
-            radius: 150,
+            radius: 120,
           
             // animation speed
             // slow, normal, fast
-            maxSpeed: 'normal',
-            initSpeed: 'normal',
+            maxSpeed: 'fast',
+            initSpeed: 'fast',
           
             // 0 = top
             // 90 = left
