@@ -42,12 +42,9 @@ export default function About() {
 
       } ,[])
   return (
-    <>
-
-    <div>
-
-        <div>
-            <h1>My Portfolio</h1>
+    <div className='about'>
+        <div className='about__para'>
+            <h1 className='title'>All About Me</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Sapiente eaque suscipit, id veritatis saepe animi non, 
                 tempore dolores doloremque odit reprehenderit temporibus ex 
@@ -58,6 +55,6 @@ export default function About() {
 
         </span>
     </div>
-    </>
+
   )
 }

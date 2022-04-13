@@ -9,4 +9,13 @@
         width: 80%;
         margin: auto;
     }
+    &__work {
+        display: flex;
+        flex-wrap: wrap;
+        &--img {
+            width: 50%;
+            height: 50vw;
+            background-color: bisque;
+        }
+    }
 }

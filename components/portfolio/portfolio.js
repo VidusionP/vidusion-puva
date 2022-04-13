@@ -14,9 +14,16 @@ export default function Portfolio() {
             </p>
             <Button className='contact__button' variant="outlined">Contact me</Button>
         </div>
-        <ul>
-            
-        </ul>
+        {/* <div className='portfolio__work'>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'></div>
+        </div> */}
     </div>
   )
 }
