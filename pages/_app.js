@@ -2,6 +2,7 @@ import '../styles/globals.scss';
 import '../components/header/header.scss'
 import '../components/about/about.scss'
 import '../components/hero/hero.scss'
+import '../components/portfolio/portfolio.scss'
 
 
 import Script from 'next/script'
