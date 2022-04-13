@@ -1,0 +1,28 @@
+.html {
+    color: #5F5F5F;
+}
+.html1 {
+    color: #5F5F5F;
+    text-align:end;
+}
+.hero {
+    margin:auto;
+    width: 80%;
+    color:white;
+    &__image {
+        width: 50%;
+        margin: auto;
+        border-radius: 100%;
+    }
+    &__title {
+        font-size: 35px;
+        font-style:bold;
+        &--line {
+            font-weight:900;
+        }
+        &--img {
+            height:100%;
+            width:35px;
+        }
+    }
+}

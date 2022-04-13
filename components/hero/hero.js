@@ -2,38 +2,41 @@ import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
 import header from '../../public/Head.png'
 import down from '../../public/arrowdown.png'
+import Button from '@mui/material/Button';
+import V from '../../public/V.png'
 
 
 export default function Hero() {
   return (
-    <div>
-        <p>&lt;body&gt;</p>
-        <p>&lt;img</p>
-        <div>
-            <Image src={header} priority={true}/>
+    <div className='hero'>
+        <p className='html'>&lt;body&gt;</p>
+        <p className='html'>&lt;img</p>
+        <div className='hero__image'> 
+            <Image src={header} priority={true} style={{borderRadius:'50%'}}/>
         </div>
-        <p>&gt;</p>
-        <p>&lt;h1&gt;</p>
-        <div>
-            <p>Hi,</p>
-            <p>I&apos;m Vidu,</p>
-            <p>Web Developer</p>
+        <p className='html1'>/&gt;</p>
+        <p className='html'>&lt;h1&gt;</p>
+        <div className='hero__title'>
+            <p className='hero__title--line'>Hi,</p>
+            <p className='hero__title--line'>I&apos;m  
+            <div className='hero__title--img'>
+                <Image priority={true} src={V}/>
+            </div>idu,</p>
+            <p className='hero__title--line'>Web Developer</p>
         </div>
-        <p>&lt;h1/&gt;</p>
-        <p>&lt;p&gt;</p>
+        <p className='html1'>&lt;/h1&gt;</p>
+        <p className='html'>&lt;p&gt;</p>
         <p>FRONT END DEVELOPER</p>
-        <p>&lt;p&gt;</p>
-        <button>
-            Contact Me
-        </button>
-        <div>
-            <div>Scroll Down 
+        <p className='html1'>&lt;/p&gt;</p>
+        <Button className='test' variant="outlined">Contact me</Button>
+        <div className='hero__bot'>
+            <div className='hero__bot--scroll'>Scroll Down 
                 <Image src={down} priority={true}/>
             </div>
-            <div>
+            <div className='hero__bot--mid'>
                 <Image src={down} priority={true}/>
             </div>
-            <div>Scroll Down 
+            <div className='hero__bot--scroll side'>Scroll Down 
                 <Image src={down} priority={true}/>
             </div>
         </div>
