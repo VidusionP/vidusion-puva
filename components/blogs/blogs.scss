@@ -1,9 +1,16 @@
 .red {
     border-top: 1px solid rgb(246, 15, 15);
 }
+.contact__form--name{
+    margin:20px
+}
+.contact__form--name.Mui-focused{
+    background-color: green;
+}
 .blogs {
     width: 80%;
     margin: auto;
+    position: relative;
 
     &__bkg {
         position: absolute;
@@ -20,6 +27,7 @@
             z-index: 1;
             background-color: #1D1D1D;
             padding: 20px 25px;
+            margin-bottom:20px ;
             border-top: 1px solid rgb(246, 15, 15);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             &__tle {
