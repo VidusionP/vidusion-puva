@@ -15,10 +15,10 @@ export default function Contact() {
             est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
         </p>
         <form className='contact__form'>
-            <TextField id="name" className='contact__form--name'  label="Name" fullWidth autocomplete="new-password" variant="filled" />
-            <TextField id="email" label="Email" fullWidth autocomplete="new-password" variant="filled" />
-            <TextField id="subject" label="Subject" fullWidth autoComplete="new-password" variant="filled" />
-            <TextField id="message" label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
+            <TextField className='contact__form--name'  label="Name" fullWidth autocomplete="new-password" variant="filled" />
+            <TextField  label="Email" fullWidth autocomplete="new-password" variant="filled" />
+            <TextField  label="Subject" fullWidth autoComplete="new-password" variant="filled" />
+            <TextField  label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
         </form>
         <Button className='test' variant="outlined">Send Message</Button>
         {/* <Map/> */}
