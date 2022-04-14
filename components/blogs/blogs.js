@@ -3,19 +3,30 @@ import Image from 'next/image';
 import Button from '@mui/material/Button';
 
 export default function Blogs() {
+    const [count, setCount] = useState([
+        {
+        title:"WEB DEVELOPMENT",
+        desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
+        sub:"Fundamentals of HTML5 & CSS3",
+        color:'red'
+        }
+]);
   return (
-    <div>
-        <span>Blogs </span>
-        <h1>Blogs</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Sapiente eaque suscipit, id veritatis saepe animi non, 
-            tempore dolores doloremque odit reprehenderit temporibus ex 
-            autem odio expedita dicta voluptate numquam fuga!
-        </p>
-        <div>
-            <p>WEB DEVELOPMENT</p>
-            <h3>Fundamentals of HTML5 & CSS3</h3>
-            <p>Hypertext markup language (HTML) structures documents such as web pages by...</p>
+    <div className='blogs'>
+        <span className='blogs__bkg'>Blog</span>
+        <h1 className='title'>Blogs</h1>
+        <div className='blogs__section'>
+            {count.map((item,i) => {
+                return (
+                <div className='blogs__section--card' style={{borderTop:`2px solid ${item.color}`}}>
+                    <p className='blogs__section--card__tle' style={{color:`${item.color}`}}>{item.title}</p>
+                    <h3 className='blogs__section--card__sub'>{item.sub}</h3>
+                    <p className='blogs__section--card__desc'>{item.desc}</p>
+                </div>
+                )
+            })}
+            
+            
         </div>
     </div>
   )

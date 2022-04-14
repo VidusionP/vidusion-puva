@@ -1,0 +1,43 @@
+.red {
+    border-top: 1px solid rgb(246, 15, 15);
+}
+.blogs {
+    width: 80%;
+    margin: auto;
+
+    &__bkg {
+        position: absolute;
+        left: 50%;
+    transform: translate(-50%, 0);
+        font-size:250px;
+        color:#616161;
+
+        // z-index: ;
+    }
+    &__section{
+        position: relative;
+        &--card {
+            z-index: 1;
+            background-color: #1D1D1D;
+            padding: 20px 25px;
+            border-top: 1px solid rgb(246, 15, 15);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            &__tle {
+                margin: 5px 0;
+                font-size: 12px;
+                letter-spacing: 4px;
+            }
+            &__sub {
+                color: white;
+                font-size: 25px;
+            }
+            &__desc {
+                color:#616161;
+                margin: 10px 0;
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+
+    }
+}
