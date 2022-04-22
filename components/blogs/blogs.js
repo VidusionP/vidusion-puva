@@ -14,7 +14,9 @@ export default function Blogs() {
   return (
     <div className='blogs'>
         <span className='blogs__bkg'>Blog</span>
-        <h1 className='title'>Blogs</h1>
+        <p className='html'>&lt;h2&gt;</p>
+        <h2 className='title'>Blogs</h2>
+        <p className='html'>&lt;/h2&gt;</p>
         <div className='blogs__section'>
             {count.map((item,i) => {
                 return (

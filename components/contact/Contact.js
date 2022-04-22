@@ -37,12 +37,17 @@ export default function Contact() {
   const classes = useStyles();
   return (
     <div className='contact'>
-        <h1 className='title'>Contact Me</h1>
+        <p className='html'>&lt;h2&gt;</p>
+        <h2 className='title'>Contact Me</h2>
+        <p className='html'>&lt;/h2&gt;</p>
+        <p className='html'>&lt;p&gt;</p>
         <p className='contact__para'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
              Laboriosam facere fugiat facilis ducimus minus
               voluptatum dicta temporibus suscipit, 
             est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
         </p>
+        <p className='html'>&lt;/p&gt;</p>
+        <p className='html'>&lt;form&gt;</p>
         <form className='contact__form'>
             <TextField
             className='contact__form--name contact__form--input'
@@ -91,8 +96,11 @@ export default function Contact() {
                 }
               }}
             className='contact__form--name contact__form--input' label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
+            <Button className='contact__button contact__bot' variant="outlined">Send Message</Button>
+        
         </form>
-        <Button className='contact__button contact__bot' variant="outlined">Send Message</Button>
+        <p className='html'>&lt;/form&gt;</p>
+        <p className='html'>&lt;/body&gt;</p>
         {/* <Map/> */}
     </div>
   )

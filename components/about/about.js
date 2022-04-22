@@ -44,12 +44,19 @@ export default function About() {
   return (
     <div className='about'>
         <div className='about__para'>
-            <h1 className='title'>All About Me</h1>
+            <p className='html'>&lt;h2&gt;</p>
+            
+            <h2 className='title'>All About Me</h2>
+            <p className='html'>&lt;/h2&gt;</p>
+            <p className='html'>&lt;p&gt;</p>
+
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Sapiente eaque suscipit, id veritatis saepe animi non, 
                 tempore dolores doloremque odit reprehenderit temporibus ex 
                 autem odio expedita dicta voluptate numquam fuga!
             </p>
+            <p className='html'>&lt;/p&gt;</p>
+
         </div>
         <span className="content">
 
