@@ -1,8 +1,18 @@
 import React, {  useState, useEffect } from 'react';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
+import { createTheme } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  input: {
+    color: "#565555",
+    border: '1px solid black'
+  }
+});
 
 export default function Portfolio() {
+  const classes = useStyles();
   return (
     <div className='portfolio'>
         <div className='portfolio__top'>
@@ -16,7 +26,7 @@ export default function Portfolio() {
                 autem odio expedita dicta voluptate numquam fuga!
             </p>
             <p className='html'>&lt;/p&gt;</p>
-            <Button className='contact__button' variant="outlined">Contact me</Button>
+            <Button classes={{root: classes.input}} className='contact__button' variant="outlined">Contact me</Button>
         </div>
         {/* <div className='portfolio__work'>
           <div className='portfolio__work--img'></div>
