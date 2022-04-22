@@ -20,7 +20,7 @@ export default function Blogs() {
         <div className='blogs__section'>
             {count.map((item,i) => {
                 return (
-                <div className='blogs__section--card' style={{borderTop:`2px solid ${item.color}`}}>
+                <div key={i} className='blogs__section--card' style={{borderTop:`2px solid ${item.color}`}}>
                     <p className='blogs__section--card__tle' style={{color:`${item.color}`}}>{item.title}</p>
                     <h3 className='blogs__section--card__sub'>{item.sub}</h3>
                     <p className='blogs__section--card__desc'>{item.desc}</p>
