@@ -6,8 +6,14 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   input: {
-    color: "#565555",
-    border: '1px solid black'
+    color:"#2FE7C6",
+    border: "1px solid #2FE7C6",
+    margin: "40px 0",
+    borderRadius: "1px",
+    letterSpacing: "2px",
+    "&:hover": {
+        border: "1px solid #2FE7C6"
+    }
   }
 });
 
