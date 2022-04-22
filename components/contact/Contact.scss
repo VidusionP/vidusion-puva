@@ -1,4 +1,23 @@
 .contact {
     width: 80%;
     margin: auto;
+    &__form {
+        &--input {
+            background-color:#2B2B2B;
+            margin: 5px 0;
+        }
+    }
+    &__para {
+        color: white;
+    }
+    &__bot {
+        margin: 5px 0;
+    }
 }
+.MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: red;
+  }
+
+// .testfield__hi {
+//     color:'#565555' !important;
+// }

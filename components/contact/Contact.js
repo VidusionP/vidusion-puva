@@ -3,9 +3,38 @@ import Image from 'next/image';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Map from '../map.js'
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  input: {
+    color: "#565555",
+    "&.Mui-focused": {
+      color: "#2FE7C6"
+    }
+  },
+  textFieldRoot: {
+    // this will be applied when hovered (input text color change)
+    color:'#2FE7C6',
+    "&:hover": {
+      color: "#565555",
+    },
+    "&:after": {
+      borderColor: '#2FE7C6'
+    },
+    // this will applied when hovered (input border color change)
+    "&:hover $textFieldNotchedOutline": {
+      borderColor: '#2FE7C6'
+    },
+    // this will be applied when focused (input border color change)
+    "&$textFieldFocused $textFieldNotchedOutline": {
+      borderColor: '#2FE7C6'
+    }
+  },
+});
 
 
 export default function Contact() {
+  const classes = useStyles();
   return (
     <div className='contact'>
         <h1 className='title'>Contact Me</h1>
@@ -15,12 +44,55 @@ export default function Contact() {
             est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
         </p>
         <form className='contact__form'>
-            <TextField className='contact__form--name'  label="Name" fullWidth autocomplete="new-password" variant="filled" />
-            <TextField  label="Email" fullWidth autocomplete="new-password" variant="filled" />
-            <TextField  label="Subject" fullWidth autoComplete="new-password" variant="filled" />
-            <TextField  label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
+            <TextField
+            className='contact__form--name contact__form--input'
+              InputLabelProps={{
+                className: classes.input,
+                }}
+              InputProps={{
+                classes: {
+                  root: classes.textFieldRoot,
+                }
+              }}
+              label="Name" 
+              fullWidth 
+              autocomplete="new-password" 
+              variant="filled" />
+            <TextField 
+              className='contact__form--name contact__form--input'
+              InputLabelProps={{
+                className: classes.input,
+                }}
+              InputProps={{
+                classes: {
+                  root: classes.textFieldRoot,
+                }
+              }}
+              id='feild1' label="Email" 
+              fullWidth autocomplete="new-password" 
+              variant="filled" />
+            <TextField 
+              InputLabelProps={{
+                className: classes.input,
+                }}
+              InputProps={{
+                classes: {
+                  root: classes.textFieldRoot,
+                }
+              }}
+              className='contact__form--name contact__form--input' label="Subject" fullWidth autoComplete="new-password" variant="filled" />
+            <TextField
+              InputLabelProps={{
+                className: classes.input,
+                }}
+              InputProps={{
+                classes: {
+                  root: classes.textFieldRoot,
+                }
+              }}
+            className='contact__form--name contact__form--input' label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
         </form>
-        <Button className='test' variant="outlined">Send Message</Button>
+        <Button className='contact__button contact__bot' variant="outlined">Send Message</Button>
         {/* <Map/> */}
     </div>
   )

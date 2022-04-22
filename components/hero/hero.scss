@@ -12,10 +12,12 @@
 }
 .contact__button {
     color:#2FE7C6;
-    border: 2px solid #2FE7C6;
+    border: 1px solid #2FE7C6;
     margin: 40px 0;
+    border-radius: 1px;
+    letter-spacing: 2px;
     &:hover {
-        border: 2px solid #2FE7C6;
+        border: 1px solid #2FE7C6;
 
     }
 }
