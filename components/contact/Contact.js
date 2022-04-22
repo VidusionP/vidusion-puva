@@ -6,6 +6,12 @@ import Map from '../map.js'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
+  textField: {
+
+  backgroundColor:'#2B2B2B',
+  margin: '5px 0',
+
+},
   input: {
     color: "#565555",
     "&.Mui-focused": {
@@ -15,6 +21,7 @@ const useStyles = makeStyles({
   textFieldRoot: {
     // this will be applied when hovered (input text color change)
     color:'#2FE7C6',
+
     "&:hover": {
       color: "#565555",
     },
@@ -52,7 +59,7 @@ export default function Contact() {
         <p className='html'>&lt;form&gt;</p>
         <form className='contact__form'>
             <TextField
-            className='contact__form--name contact__form--input'
+            className={classes.textField}
               InputLabelProps={{
                 className: classes.input,
                 }}

@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Portfolio() {
+export default function Portfolio(props) {
   const classes = useStyles();
   return (
     <div className='portfolio'>
@@ -32,7 +32,7 @@ export default function Portfolio() {
                 autem odio expedita dicta voluptate numquam fuga!
             </p>
             <p className='html'>&lt;/p&gt;</p>
-            <Button classes={{root: classes.input}} className='contact__button' variant="outlined">Contact me</Button>
+            <Button classes={{root: props.vidu1}} className='contact__button' variant="outlined">Contact me</Button>
         </div>
         {/* <div className='portfolio__work'>
           <div className='portfolio__work--img'></div>

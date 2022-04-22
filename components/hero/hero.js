@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import V from '../../public/V.png'
 
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div className='hero'>
         <p className='html'>&lt;body&gt;</p>
@@ -18,7 +18,7 @@ export default function Hero() {
         <p className='html'>&lt;h1&gt;</p>
         <div className='hero__title'>
             <p className='hero__title--line'>Hi,</p>
-            <p className='hero__title--line'>I&apos;m  
+            <p className='hero__title--line'>I&apos;m     
             <span className='hero__title--img'>
                 <Image priority={true} src={V}/>
             </span>idu,</p>
@@ -28,7 +28,7 @@ export default function Hero() {
         <p className='html'>&lt;p&gt;</p>
         <p className='hero__sub'>FRONT END DEVELOPER</p>
         <p className='html'>&lt;/p&gt;</p>
-        <Button className='contact__button'  variant="outlined">Contact me</Button>
+        <Button classes={{root: props.vidu}}  variant="outlined">Contact me</Button>
         <div className='hero__bot'>
             <div className='hero__bot--scroll'>
                 <span>Scroll Down</span>
