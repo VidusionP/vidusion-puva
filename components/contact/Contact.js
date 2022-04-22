@@ -35,6 +35,8 @@ const useStyles = makeStyles({
 
 export default function Contact() {
   const classes = useStyles();
+
+  const inputStyle = { WebkitBoxShadow: "0 0 0 1000px blue inset" };
   return (
     <div className='contact'>
         <p className='html'>&lt;h2&gt;</p>
@@ -61,7 +63,7 @@ export default function Contact() {
               }}
               label="Name" 
               fullWidth 
-              autocomplete="new-password" 
+              autocomplete="no" 
               variant="filled" />
             <TextField 
               className='contact__form--name contact__form--input'
@@ -73,8 +75,9 @@ export default function Contact() {
                   root: classes.textFieldRoot,
                 }
               }}
-              id='feild1' label="Email" 
-              fullWidth autocomplete="new-password" 
+               label="Email" 
+              fullWidth
+              autoComplete="no" 
               variant="filled" />
             <TextField 
               InputLabelProps={{
