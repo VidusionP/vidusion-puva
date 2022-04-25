@@ -40,7 +40,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function Contact() {
+export default function Contact(props) {
   const classes = useStyles();
 
   const inputStyle = { WebkitBoxShadow: "0 0 0 1000px blue inset" };
@@ -50,7 +50,7 @@ export default function Contact() {
         <h2 className='title'>Contact Me</h2>
         <p className='html'>&lt;/h2&gt;</p>
         <p className='html'>&lt;p&gt;</p>
-        <p className='contact__para'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        <p className='contact__para font'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
              Laboriosam facere fugiat facilis ducimus minus
               voluptatum dicta temporibus suscipit, 
             est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
@@ -106,7 +106,7 @@ export default function Contact() {
                 }
               }}
             className='contact__form--name contact__form--input' label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
-            <Button className='contact__button contact__bot' variant="outlined">Send Message</Button>
+            <Button classes={{root: props.vidu2}} variant="outlined">Send Message</Button>
         
         </form>
         <p className='html'>&lt;/form&gt;</p>

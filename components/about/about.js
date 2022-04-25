@@ -50,7 +50,7 @@ export default function About() {
             <p className='html'>&lt;/h2&gt;</p>
             <p className='html'>&lt;p&gt;</p>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <p className='font'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Sapiente eaque suscipit, id veritatis saepe animi non, 
                 tempore dolores doloremque odit reprehenderit temporibus ex 
                 autem odio expedita dicta voluptate numquam fuga!

@@ -9,9 +9,15 @@
 }
 .portfolio {
     color: white;
+    font-family: 'Roboto', sans-serif;
+    
     &__top {
         width: 80%;
         margin: auto;
+        &--para {
+            font-size: 15px;
+            line-height:22.5px;
+        }
     }
     &__work {
         display: flex;
@@ -22,4 +28,9 @@
             background-color: bisque;
         }
     }
+}
+.font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height:22.5px;
 }

@@ -26,7 +26,7 @@ export default function Portfolio(props) {
             <h2 className='title'>My Portfolio</h2>
             <p className='html'>&lt;/h2&gt;</p>
             <p className='html'>&lt;p&gt;</p>
-            <p className='portfolio__top--para'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            <p className='portfolio__top--para font'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                 Sapiente eaque suscipit, id veritatis saepe animi non, 
                 tempore dolores doloremque odit reprehenderit temporibus ex 
                 autem odio expedita dicta voluptate numquam fuga!

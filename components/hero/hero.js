@@ -5,7 +5,6 @@ import down from '../../public/arrowdown.png'
 import Button from '@mui/material/Button';
 import V from '../../public/V.png'
 
-
 export default function Hero(props) {
   return (
     <div className='hero'>
@@ -28,7 +27,7 @@ export default function Hero(props) {
         <p className='html'>&lt;p&gt;</p>
         <p className='hero__sub'>FRONT END DEVELOPER</p>
         <p className='html'>&lt;/p&gt;</p>
-        <Button classes={{root: props.vidu}} className='vidu123'  variant="outlined">Contact me</Button>
+        <Button classes={{root: props.vidu}}   variant="outlined">Contact me</Button>
         <div className='hero__bot'>
             <div className='hero__bot--scroll'>
                 <span>Scroll Down</span>

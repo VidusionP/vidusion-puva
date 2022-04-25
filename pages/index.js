@@ -15,7 +15,8 @@ const theme = createTheme({
     button: {
      fontFamily: '"Oswald", Open Sans',
     }
-  }
+  },
+  
 })
 const useStyles = makeStyles({
   input: {
@@ -43,7 +44,7 @@ export default function Home() {
             <Portfolio vidu1={classes.input}/>
             <About/>
             <Blogs/>
-            <Contact/>
+            <Contact vidu2={classes.input}/>
             </ThemeProvider>
     </>
   )
