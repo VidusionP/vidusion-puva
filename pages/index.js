@@ -7,7 +7,16 @@ import Blogs from '../components/blogs/blogs'
 import Contact from '../components/contact/Contact'
 import Script from 'next/script'
 import { makeStyles } from '@mui/styles';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from "@mui/material/styles";
 
+const theme = createTheme({
+  typography: {
+    button: {
+     fontFamily: '"Oswald", Open Sans',
+    }
+  }
+})
 const useStyles = makeStyles({
   input: {
     color:"#2FE7C6",
@@ -29,11 +38,13 @@ export default function Home() {
               src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js" 
               strategy="beforeInteractive"/>
             <Header/>
+            <ThemeProvider theme={theme}>
             <Hero vidu={classes.input}/>
             <Portfolio vidu1={classes.input}/>
             <About/>
             <Blogs/>
             <Contact/>
+            </ThemeProvider>
     </>
   )
 }
