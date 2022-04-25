@@ -26,8 +26,8 @@ export default function About() {
           
             // animation speed
             // slow, normal, fast
-            maxSpeed: 'fast',
-            initSpeed: 'fast',
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
           
             // 0 = top
             // 90 = left
