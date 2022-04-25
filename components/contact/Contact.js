@@ -73,7 +73,8 @@ export default function Contact(props) {
               autocomplete="no" 
               variant="filled" />
             <TextField 
-              className='contact__form--name contact__form--input'
+                          className={classes.textField}
+
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -95,7 +96,8 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
-              className='contact__form--name contact__form--input' label="Subject" fullWidth autoComplete="new-password" variant="filled" />
+                          className={classes.textField}
+ label="Subject" fullWidth autoComplete="new-password" variant="filled" />
             <TextField
               InputLabelProps={{
                 className: classes.input,
@@ -105,7 +107,8 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
-            className='contact__form--name contact__form--input' label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
+                        className={classes.textField}
+ label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
             <Button classes={{root: props.vidu2}} variant="outlined">Send Message</Button>
         
         </form>
