@@ -4,21 +4,9 @@ import Button from '@mui/material/Button';
 import { createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles({
-  input: {
-    color:"#2FE7C6",
-    border: "1px solid #2FE7C6",
-    margin: "40px 0",
-    borderRadius: "1px",
-    letterSpacing: "2px",
-    "&:hover": {
-        border: "1px solid #2FE7C6"
-    }
-  }
-});
+
 
 export default function Portfolio(props) {
-  const classes = useStyles();
   return (
     <div className='portfolio'>
         <div className='portfolio__top'>

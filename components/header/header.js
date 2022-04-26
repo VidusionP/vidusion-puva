@@ -22,9 +22,9 @@ export default function Header() {
       };
     useEffect(() => {
         console.log("hi")
-        // isOpen?document.body.classList.add('fullBody'):document.body.classList.remove('fullBody')
-        // isOpen?document.documentElement.classList.add('fullBody'):document.documentElement.classList.remove('fullBody')
-    },[])
+        isOpen?document.body.classList.add('fullBody'):document.body.classList.remove('fullBody')
+        isOpen?document.documentElement.classList.add('fullBody'):document.documentElement.classList.remove('fullBody')
+    })
     return (
         <header className='header'>
             <div className='header__top'>
@@ -37,8 +37,8 @@ export default function Header() {
                     <div className='header__top--sound__logo'>
                         <Image priority={true} src={music}/>
                     </div>
-                    Sound
-                    <p className='header__top--sound__text' style={{color:check1? 'green' :'red'}} >{check1?"ON":"OFF"}</p>
+                    Sound 
+                    <p className='header__top--sound__text' style={{color:check1? 'green' :'red'}} >{check1?" ON ":"OFF"}</p>
                 </div>
                 <div className='header__top--menu'>
                     <HamburgerCollapse isActive={isOpen} toggleButton={() => setIsOpen(!isOpen)}/>

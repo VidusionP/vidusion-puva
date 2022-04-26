@@ -16,12 +16,31 @@ export default function Hero(props) {
         <p className='html1'>/&gt;</p>
         <p className='html'>&lt;h1&gt;</p>
         <div className='hero__title'>
-            <p className='hero__title--line'>Hi,</p>
-            <p className='hero__title--line'>I&apos;m     
+            <span className='hero__title--line'>H</span>
+            <span className='hero__title--line'>i</span>
+            <span className='hero__title--line'>,</span><br/>
+            <span className='hero__title--line'>I</span>
+            <span className='hero__title--line'>&apos;</span>
+            <span className='hero__title--line'>m</span>  
             <span className='hero__title--img'>
                 <Image priority={true} src={V}/>
-            </span>idu,</p>
-            <p className='hero__title--line'>Web Developer</p>
+            </span>
+            <span className='hero__title--line'>i</span>  
+            <span className='hero__title--line'>d</span>  
+            <span className='hero__title--line'>u</span><br/>
+            <span className='hero__title--line'>w</span>  
+            <span className='hero__title--line'>e</span>  
+            <span className='hero__title--line'>b</span> &nbsp; 
+            <span className='hero__title--line'>d</span>  
+            <span className='hero__title--line'>e</span>  
+            <span className='hero__title--line'>v</span>  
+            <span className='hero__title--line'>e</span>  
+            <span className='hero__title--line'>l</span>  
+            <span className='hero__title--line'>o</span>  
+            <span className='hero__title--line'>p</span>  
+            <span className='hero__title--line'>e</span>  
+            <span className='hero__title--line'>r</span>  
+            
         </div>
         <p className='html1'>&lt;/h1&gt;</p>
         <p className='html'>&lt;p&gt;</p>

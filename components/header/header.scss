@@ -1,5 +1,12 @@
+@import '../../styles/partials/fonts';
+
 .goku {
     padding: 10px
+}
+.fullBody {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
 }
 .iyuFSK {
     padding: 10px !important;
@@ -40,6 +47,8 @@
         &--sound {
             display: flex;
             align-items: center;
+            width:100px;
+            // justify-content: center;
         }
         &--menu {
             z-index:111;
@@ -75,10 +84,14 @@
             }
             &__name {
                 font-size:40px;
+    font-family: 'Mochiy', sans-serif;
+
             }
             &__job {
                 color:#616161;
-                padding-top: 10px
+                padding-top: 10px;
+            font-family:'Oswald', sans-serif;
+
             }
         }
         &--bot {
@@ -102,11 +115,14 @@
                 width:100%;
                 border-top:1px solid #282828;
                 margin-top:10vh;
+            font-family:'Oswald', sans-serif;
+
                 &--list {
                     width:100%;
                     border-bottom:1px solid #282828;
                     text-align: center;
                     padding: 20px 0;
+                    letter-spacing: 2px;
                 }
             }
             &__soc {
