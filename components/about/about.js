@@ -50,10 +50,16 @@ export default function About() {
             <p className='html'>&lt;/h2&gt;</p>
             <p className='html'>&lt;p&gt;</p>
 
-            <p className='font'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Sapiente eaque suscipit, id veritatis saepe animi non, 
-                tempore dolores doloremque odit reprehenderit temporibus ex 
-                autem odio expedita dicta voluptate numquam fuga!
+            <p className='font'>
+                Transitioning from a science background to the techology field,
+                back in 2018, has been the greatest decision Ive ever made.
+                <br/>
+                For the past 5 years, I had many opportunities to work in a vast 
+                spectrum of web technologies, which allowed me acquire a significant
+                amount of experience. Working for companies and aspiring individuals, I met 
+                and learnt from ambitious people.
+                <br/>
+                I currently work remotely with a company, being open for new opportunities.
             </p>
             <p className='html'>&lt;/p&gt;</p>
 

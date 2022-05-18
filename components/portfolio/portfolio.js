@@ -14,10 +14,11 @@ export default function Portfolio(props) {
             <h2 className='title'>My Portfolio</h2>
             <p className='html'>&lt;/h2&gt;</p>
             <p className='html'>&lt;p&gt;</p>
-            <p className='portfolio__top--para font'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Sapiente eaque suscipit, id veritatis saepe animi non, 
-                tempore dolores doloremque odit reprehenderit temporibus ex 
-                autem odio expedita dicta voluptate numquam fuga!
+            <p className='portfolio__top--para font'>
+              A small gallery of recent projects chosen by me.
+              I've done them all with inspirations springing from
+              other developers. Interested to learn more about one?
+              Contact me now.
             </p>
             <p className='html'>&lt;/p&gt;</p>
             <Button classes={{root: props.vidu1}} className='contact__button' variant="outlined">Contact me</Button>

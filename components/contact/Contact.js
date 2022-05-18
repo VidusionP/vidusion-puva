@@ -50,10 +50,9 @@ export default function Contact(props) {
         <h2 className='title'>Contact Me</h2>
         <p className='html'>&lt;/h2&gt;</p>
         <p className='html'>&lt;p&gt;</p>
-        <p className='contact__para font'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Laboriosam facere fugiat facilis ducimus minus
-              voluptatum dicta temporibus suscipit, 
-            est voluptate delectus minima nostrum quo maiores dolore magnam enim assumenda cum.
+        <p className='contact__para font'>
+          I'm interested in front end development opportunities - especially small, fast growing companies.
+          However, if you have other requests or question, dont hesitate to use the form.
         </p>
         <p className='html'>&lt;/p&gt;</p>
         <p className='html'>&lt;form&gt;</p>

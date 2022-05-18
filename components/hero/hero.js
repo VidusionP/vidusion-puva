@@ -4,6 +4,7 @@ import header from '../../public/Head.png'
 import down from '../../public/arrowdown.png'
 import Button from '@mui/material/Button';
 import V from '../../public/V.png'
+import mid from '../../public/heroDesign.png'
 
 export default function Hero(props) {
   return (
@@ -59,7 +60,7 @@ export default function Hero(props) {
                 
             </div>
             <div className='hero__bot--mid'>
-                <Image src={down} priority={true}/>
+                <Image src={mid} priority={true}/>
             </div>
             <div className='hero__bot--scroll side'>
                 <span>
