@@ -9,6 +9,24 @@ export default function Blogs() {
         desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
         sub:"Fundamentals of HTML5 & CSS3",
         color:'red'
+        },
+        {
+        title:"WEB DEVELOPMENT",
+        desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
+        sub:"Traffic-Generating SEO Plan",
+        color:'red'
+        },
+        {
+            title:"WEB DEVELOPMENT",
+            desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
+            sub:"Web Development Trends in 2022",
+            color:'red'
+        },
+        {   
+        title:"MARKETING STRATEGIES",
+        desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
+        sub:"Marketing Strategies for Small Businesses",
+        color:'#30aebb'
         }
 ]);
   return (
