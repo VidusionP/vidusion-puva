@@ -16,7 +16,7 @@ export default function Portfolio(props) {
             <p className='html'>&lt;p&gt;</p>
             <p className='portfolio__top--para font'>
               A small gallery of recent projects chosen by me.
-              I've done them all with inspirations springing from
+              Ive done them all with inspirations springing from
               other developers. Interested to learn more about one?
               Contact me now.
             </p>
