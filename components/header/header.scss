@@ -44,6 +44,7 @@
         width: 80%;
         margin:auto;
         padding-top:20px;
+
         &--sound {
             display: flex;
             align-items: center;
@@ -76,8 +77,9 @@
             align-items:center;
             color:white;
             background-color:black;
-            padding: 3vh 0;
+            padding: 5vh 0;
             width:100%;
+            box-sizing:border-box;
             &__logo {
                 width:80px;
                 
@@ -114,7 +116,7 @@
                 color:rgba(208, 208, 208, 1);
                 width:100%;
                 border-top:1px solid #282828;
-                margin-top:5vh;
+                margin-top:3vh;
             font-family:'Oswald', sans-serif;
 
                 &--list {
@@ -129,7 +131,7 @@
                 display:flex;
                 margin-top:2vh;
                 &--img {
-                    width:40px;
+                    width:20px;
                     padding:10px;
                 }
             }
