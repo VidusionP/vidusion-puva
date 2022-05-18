@@ -19,15 +19,18 @@ export default function Hero(props) {
             <span className='hero__title--line'>H</span>
             <span className='hero__title--line'>i</span>
             <span className='hero__title--line'>,</span><br/>
-            <span className='hero__title--line'>I</span>
-            <span className='hero__title--line'>&apos;</span>
-            <span className='hero__title--line'>m</span>  
-            <span className='hero__title--img'>
-                <Image priority={true} src={V}/>
-            </span>
-            <span className='hero__title--line'>i</span>  
-            <span className='hero__title--line'>d</span>  
-            <span className='hero__title--line'>u</span><br/>
+            <div>
+                <span className='hero__title--line'>I</span>
+                <span className='hero__title--line'>&apos;</span>
+                <span className='hero__title--line'>m</span>  
+                <span className='hero__title--img'>
+                    <Image priority={true} src={V}/>
+                </span>
+                <span className='hero__title--line'>i</span>  
+                <span className='hero__title--line'>d</span>  
+                <span className='hero__title--line'>u</span><br/>
+            </div>
+            
             <span className='hero__title--line'>w</span>  
             <span className='hero__title--line'>e</span>  
             <span className='hero__title--line'>b</span> &nbsp; 

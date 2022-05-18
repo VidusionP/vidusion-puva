@@ -50,6 +50,7 @@
     &__bot {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
         &--scroll {
             writing-mode: vertical-rl;
             font-family: 'Dosis', sans-serif;
@@ -57,8 +58,10 @@
         animation-iteration-count: infinite;
         animation-name: bounce-4;
         animation-timing-function: ease;
+        display: flex;
             &__arr {
-                display: inline-flex;
+                // display: inline-flex;
+                // width:20px;
             }
         }
     }
