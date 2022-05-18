@@ -53,12 +53,14 @@ export default function About() {
             <p className='font'>
                 Transitioning from a science background to the techology field,
                 back in 2018, has been the greatest decision Ive ever made.
-                <br/>
+                <br/><br/>
+
                 For the past 5 years, I had many opportunities to work in a vast 
                 spectrum of web technologies, which allowed me acquire a significant
                 amount of experience. Working for companies and aspiring individuals, I met 
                 and learnt from ambitious people.
-                <br/>
+                <br/><br/>
+
                 I currently work remotely with a company, being open for new opportunities.
             </p>
             <p className='html'>&lt;/p&gt;</p>
