@@ -51,7 +51,7 @@ export default function Contact(props) {
         <p className='html'>&lt;/h2&gt;</p>
         <p className='html'>&lt;p&gt;</p>
         <p className='contact__para font'>
-          I'm interested in front end development opportunities - especially small, fast growing companies.
+          Im interested in front end development opportunities - especially small, fast growing companies.
           <br/><br/>
           However, if you have other requests or question, dont hesitate to use the form.
         </p>
