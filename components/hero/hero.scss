@@ -53,7 +53,7 @@
         margin-bottom: 30px;
         &--mid {
             width: 100px;
-            animation: rotation 4s linear 10s infinite ;
+            animation: rotation 10s linear infinite ;
         }
         &--scroll {
             writing-mode: vertical-rl;
@@ -93,9 +93,7 @@
     0% {
       transform: rotate(0deg);
     }
-    20% {
-      transform: rotate(359deg);
-    }
+    
     100% {
         transform: rotate(359deg);
       }

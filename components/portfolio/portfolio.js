@@ -25,7 +25,7 @@ export default function Portfolio(props) {
             <p className='html'>&lt;/p&gt;</p>
             <Button classes={{root: props.vidu1}} className='contact__button' variant="outlined">Contact me</Button>
         </div>
-        {/* <div className='portfolio__work'>
+        <div className='portfolio__work'>
           <div className='portfolio__work--img'></div>
           <div className='portfolio__work--img'></div>
           <div className='portfolio__work--img'></div>
@@ -34,7 +34,7 @@ export default function Portfolio(props) {
           <div className='portfolio__work--img'></div>
           <div className='portfolio__work--img'></div>
           <div className='portfolio__work--img'></div>
-        </div> */}
+        </div>
     </div>
   )
 }

@@ -53,9 +53,9 @@ export default function Header() {
                 </div>
                 <div className='header__nav--bot'>
                     <ul className='header__nav--bot__menu'>
-                        <li className='header__nav--bot__menu--list'>About</li>
-                        <li className='header__nav--bot__menu--list'>My Skills</li>
                         <li className='header__nav--bot__menu--list'>Work</li>
+                        <li className='header__nav--bot__menu--list'>About</li>
+                        {/* <li className='header__nav--bot__menu--list'>Skills</li> */}
                         <li className='header__nav--bot__menu--list'>Blogs</li>
                         <li className='header__nav--bot__menu--list'>Contact</li>
                     </ul>

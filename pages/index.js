@@ -5,6 +5,7 @@ import Hero from '../components/hero/hero'
 import About from '../components/about/about'
 import Blogs from '../components/blogs/blogs'
 import Contact from '../components/contact/Contact'
+import Skills from '../components/skills/skills'
 import Script from 'next/script'
 import { makeStyles } from '@mui/styles';
 import { createTheme } from '@mui/material/styles';
@@ -43,6 +44,7 @@ export default function Home() {
             <Hero vidu={classes.input}/>
             <Portfolio vidu1={classes.input}/>
             <About/>
+            {/* <Skills/> */}
             <Blogs/>
             <Contact vidu2={classes.input}/>
             </ThemeProvider>
