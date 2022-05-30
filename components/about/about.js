@@ -1,4 +1,4 @@
-import React, {  useState, useEffect } from 'react';
+import React, {  useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Button from '@mui/material/Button';
 import Script from 'next/script'
@@ -15,7 +15,7 @@ const myTags = [
 
 
 
-export default function About() {
+export default function About(props) {
 
     useEffect(() => {
 
@@ -41,8 +41,10 @@ export default function About() {
           }); 
 
       } ,[])
+      
+
   return (
-    <div className='about'>
+    <div  className='about'>
         <div className='about__para'>
             <p className='html'>&lt;h2&gt;</p>
             

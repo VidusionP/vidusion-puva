@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Portfolio from '../components/portfolio/portfolio'
 import Header from "../components/header/header"
 import Hero from '../components/hero/hero'
@@ -32,14 +32,21 @@ const useStyles = makeStyles({
   }
 });
 
+
+
+
 export default function Home() {
   const classes = useStyles();
+
+const ref  = useRef(null)
+
+
   return (
-    <>
+    <div ref={ref}>
             <Script 
               src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js" 
               strategy="beforeInteractive"/>
-            <Header/>
+            <Header vidu={ref}/>
             <ThemeProvider theme={theme}>
             <Hero vidu={classes.input}/>
             <Portfolio vidu1={classes.input}/>
@@ -48,6 +55,6 @@ export default function Home() {
             <Blogs/>
             <Contact vidu2={classes.input}/>
             </ThemeProvider>
-    </>
+    </div>
   )
 }

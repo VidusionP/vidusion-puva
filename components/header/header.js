@@ -1,4 +1,4 @@
-import React, {  useState, useEffect } from 'react';
+import React, {  useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HamburgerCollapse} from 'react-animated-burgers'
@@ -8,10 +8,11 @@ import logo from '../../public/Logo.png'
 import twitter from '../../public/twitter.png'
 
 
-export default function Header() {
+export default function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
     const [check, setCheck] = useState(false);
     const [check1, setCheck1] = useState(false);
+    
     const handleChange = () => {
         setCheck(!check);
         
@@ -20,8 +21,19 @@ export default function Header() {
         setCheck1(!check1);
         
       };
+   
+    const handleClick =(e) => {
+        const id = e.target.id
+        const arr = Array.from(props.vidu.current.childNodes)
+        const che = !isOpen
+        arr[id].scrollIntoView()
+        // setTimeout(() => setIsOpen(che), 1000)
+        setIsOpen(che)
+        
+
+      }
     useEffect(() => {
-        isOpen?document.body.classList.add('fullBody'):document.body.classList.remove('fullBody')
+        // isOpen?document.body.classList.add('fullBody'):document.body.classList.remove('fullBody')
         isOpen?document.documentElement.classList.add('fullBody'):document.documentElement.classList.remove('fullBody')
     })
     return (
@@ -29,12 +41,13 @@ export default function Header() {
             <div className='header__top'>
                 <div className='header__top--slider'>
                     <Slider
+                    
                         handleChange={handleChange}
                     />
                 </div>
                 <div className='header__top--sound' style={{color:'white'}} onClick={handleChange1}>
                     <div className='header__top--sound__logo'>
-                        <Image priority={true} src={music}/>
+                        <Image priority={true} src={music} />
                     </div>
                     Sound 
                     <p className='header__top--sound__text' style={{color:check1? 'green' :'red'}} >{check1?" ON ":"OFF"}</p>
@@ -52,12 +65,14 @@ export default function Header() {
                     <p className='header__nav--top__job'>Front End Developer</p>
                 </div>
                 <div className='header__nav--bot'>
+                
+
                     <ul className='header__nav--bot__menu'>
-                        <li className='header__nav--bot__menu--list'>Work</li>
-                        <li className='header__nav--bot__menu--list'>About</li>
+                        <li  className='header__nav--bot__menu--list' id='2' onClick={handleClick}>Work</li>
+                        <li className='header__nav--bot__menu--list' id='3' onClick={handleClick}>About</li>
                         {/* <li className='header__nav--bot__menu--list'>Skills</li> */}
-                        <li className='header__nav--bot__menu--list'>Blogs</li>
-                        <li className='header__nav--bot__menu--list'>Contact</li>
+                        <li className='header__nav--bot__menu--list' id='4' onClick={handleClick}>Blogs</li>
+                        <li className='header__nav--bot__menu--list' id='5' onClick={handleClick}>Contact</li>
                     </ul>
                     <div className='header__nav--bot__soc'>
                         <div className='header__nav--bot__soc--img'>
