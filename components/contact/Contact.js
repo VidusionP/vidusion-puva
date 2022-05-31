@@ -42,7 +42,48 @@ const useStyles = makeStyles({
 
 export default function Contact(props) {
   const classes = useStyles();
+  const [mailerState, setMailerState] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject:""
+  });
 
+  function handleStateChange(e) {
+    setMailerState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  }
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({ mailerState });
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ mailerState }),
+    })
+    .then((res) => res.json())
+    .then(async (res) => {
+      const resData = await res;
+      console.log(resData);
+      if (resData.status === "success") {
+        alert("Message Sent");
+      } else if (resData.status === "fail") {
+        alert("Message failed to send");
+      }
+    })
+      .then(() => {
+        setMailerState({
+          email: "",
+          name: "",
+          message: "",
+          subject:""
+        });
+      });
+  };
   const inputStyle = { WebkitBoxShadow: "0 0 0 1000px blue inset" };
   return (
     <div className='contact'>
@@ -57,9 +98,10 @@ export default function Contact(props) {
         </p>
         <p className='html'>&lt;/p&gt;</p>
         <p className='html'>&lt;form&gt;</p>
-        <form className='contact__form'>
+        <form className='contact__form' onSubmit={submitEmail}>
             <TextField
             className={classes.textField}
+            required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -68,13 +110,16 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
-              label="Name" 
+              label="Name"
+              name="name"
+              onChange={handleStateChange}
+              value={mailerState.name} 
               fullWidth 
               autocomplete="no" 
               variant="filled" />
             <TextField 
                           className={classes.textField}
-
+                          required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -84,10 +129,14 @@ export default function Contact(props) {
                 }
               }}
                label="Email" 
+               name="email"
+              onChange={handleStateChange}
+              value={mailerState.email} 
               fullWidth
               autoComplete="no" 
               variant="filled" />
             <TextField 
+            required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -96,9 +145,16 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
-                          className={classes.textField}
- label="Subject" fullWidth autoComplete="new-password" variant="filled" />
+              className={classes.textField}
+              label="Subject"
+              fullWidth
+              autoComplete="new-password"
+              name="subject"
+              onChange={handleStateChange}
+              value={mailerState.subject} 
+              variant="filled" />
             <TextField
+            required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -107,9 +163,17 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
-                        className={classes.textField}
- label="Message" variant="filled" multiline rows={5} fullWidth autoComplete="new-password"/>
-            <Button classes={{root: props.vidu2}} variant="outlined">Send Message</Button>
+              className={classes.textField}
+              label="Message"
+              variant="filled"
+              multiline
+              rows={5}
+              fullWidth
+              name="message"
+              onChange={handleStateChange}
+              value={mailerState.message} 
+              autoComplete="new-password"/>
+            <Button classes={{root: props.vidu2}} type="submit" variant="outlined">Send Message</Button>
         
         </form>
         <p className='html'>&lt;/form&gt;</p>

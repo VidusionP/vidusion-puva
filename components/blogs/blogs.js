@@ -8,27 +8,49 @@ export default function Blogs() {
         title:"WEB DEVELOPMENT",
         desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
         sub:"Fundamentals of HTML5 & CSS3",
-        color:'red'
+        color:'red',
+        open: false,
+        id: 0
         },
         {
         title:"WEB DEVELOPMENT",
         desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
         sub:"Traffic-Generating SEO Plan",
-        color:'red'
+        color:'red',
+        open: false,
+        id:1
         },
         {
             title:"WEB DEVELOPMENT",
             desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
             sub:"Web Development Trends in 2022",
-            color:'red'
+            color:'red',
+            open: false,
+            id:2
         },
         {   
         title:"MARKETING STRATEGIES",
         desc:"Hypertext markup language (HTML) structures documents such as web pages by...",
         sub:"Marketing Strategies for Small Businesses",
-        color:'#30aebb'
+        color:'#30aebb',
+        open: false,
+        id:3
         }
 ]);
+    const [isOpen, setIsOpen ] = useState(false)
+
+    const mouseClick = (e) => {
+        // console.log(count)
+        let list = e.target.id
+        let updatedList = count.map(item => {
+            if (item.id == list) {
+                return {...item, open : !item.open}
+            }
+            return item
+        })
+        setCount(updatedList)
+    }
+   
   return (
     <div className='blogs'>
         <span className='blogs__bkg'>Blog</span>
@@ -38,10 +60,11 @@ export default function Blogs() {
         <div className='blogs__section'>
             {count.map((item,i) => {
                 return (
-                <div key={i} className='blogs__section--card' style={{borderTop:`2px solid ${item.color}`}}>
-                    <p className='blogs__section--card__tle' style={{color:`${item.color}`}}>{item.title}</p>
-                    <h3 className='blogs__section--card__sub'>{item.sub}</h3>
-                    <p className='blogs__section--card__desc'>{item.desc}</p>
+                <div key={i} id={i} onClick={mouseClick} className='blogs__section--card' style={{borderTop:`2px solid ${item.color}`}}>
+                    <p id={i} className='blogs__section--card__tle' style={{color:`${item.color}`}}>{item.title}</p>
+                    <h3 id={i} className='blogs__section--card__sub'>{item.sub}</h3>
+                    <p id={i} className='blogs__section--card__desc'>{item.desc}</p>
+                    <span id={i} className={item.open ?'blogs__section--card__overlay mobileOpen1' : 'blogs__section--card__overlay' }>Coming Soon</span>
                 </div>
                 )
             })}
