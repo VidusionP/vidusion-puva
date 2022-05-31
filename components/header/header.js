@@ -6,6 +6,7 @@ import Slider from '../slider'
 import music from '../../public/music.png'
 import logo from '../../public/Logo.png'
 import twitter from '../../public/twitter.png'
+import PlaySound from '../PlaySound'
 
 
 export default function Header(props) {
@@ -47,6 +48,7 @@ export default function Header(props) {
                 </div>
                 <div className='header__top--sound' style={{color:'white'}} onClick={handleChange1}>
                     <div className='header__top--sound__logo'>
+                        <PlaySound playing={check1}/>
                         <Image priority={true} src={music} />
                     </div>
                     Sound 
