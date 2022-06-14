@@ -97,7 +97,9 @@
             box-sizing:border-box;
             &__logo {
                 width:80px;
-                
+                @include tablet {
+                    width: 15vw;
+                }
             }
             &__name {
                 font-size:40px;
@@ -133,7 +135,10 @@
                 border-top:1px solid #282828;
                 margin-top:3vh;
             font-family:'Oswald', sans-serif;
-
+                @include tablet {
+                    margin-top: 5vh;
+                    font-size: 2em;
+                }
                 &--list {
                     width:100%;
                     border-bottom:1px solid #282828;
@@ -148,6 +153,9 @@
                 &--img {
                     width:20px;
                     padding:10px;
+                    @include tablet {
+                        width: 4vw;
+                    }
                 }
             }
         }
