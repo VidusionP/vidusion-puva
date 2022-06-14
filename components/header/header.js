@@ -42,14 +42,14 @@ export default function Header(props) {
             <div className='header__top'>
                 <div className='header__top--slider'>
                     <Slider
-                    
+                        className='header__top--slider--slide'
                         handleChange={handleChange}
                     />
                 </div>
                 <div className='header__top--sound' style={{color:'white'}} onClick={handleChange1}>
                     <div className='header__top--sound__logo'>
                         <PlaySound playing={check1}/>
-                        <Image priority={true} src={music} />
+                        <Image layout="responsive" priority={true} src={music} />
                     </div>
                     Sound 
                     <p className='header__top--sound__text' style={{color:check1? 'green' :'red'}} >{check1?" ON ":"OFF"}</p>

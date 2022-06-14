@@ -88,11 +88,11 @@ function MUISwitch(props) {
   const stateClasses = {
     checked,
     disabled,
-    focusVisible,
+    focusVisible
   };
   
   return (
-    <SwitchRoot className={clsx(stateClasses)}>
+    <SwitchRoot className={clsx(stateClasses) }>
       <SwitchTrack>
         <SwitchThumb className={clsx(stateClasses)} />
       </SwitchTrack>

@@ -1,4 +1,5 @@
 @import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
 
 
 .title {
@@ -28,7 +29,10 @@
             background-color: bisque;
             border: 1px solid black;
         box-sizing:border-box;
-
+            @include tablet {
+                width:25%;
+                height:25vw;
+            }
 
         }
     }
