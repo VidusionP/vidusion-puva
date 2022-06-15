@@ -36,6 +36,9 @@
         @include tablet {
             max-width: 800px;
         }
+        @media screen and (min-width: 1700px) {
+            max-width:unset;
+        }
         &--card {
             z-index: 1;
             background-color: #1D1D1D;

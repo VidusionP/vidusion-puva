@@ -29,7 +29,10 @@ export default function Header(props) {
         const che = !isOpen
         arr[id].scrollIntoView()
         // setTimeout(() => setIsOpen(che), 1000)
-        setIsOpen(che)
+        if (window.innerWidth<1200) {
+            setIsOpen(che)
+
+        }
         
 
       }

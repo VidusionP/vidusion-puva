@@ -42,7 +42,7 @@ const ref  = useRef(null)
 
 
   return (
-    <div ref={ref}>
+    <div className='portfolio1' ref={ref}>
             <Script 
               src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js" 
               strategy="beforeInteractive"/>

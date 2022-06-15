@@ -4,11 +4,14 @@
 .goku {
     padding: 10px
 }
-.fullBody {
-    overflow: hidden;
-    height: 100%;
-    position: fixed;
-}
+@media screen and (max-width:1200px) {
+    .fullBody {
+        overflow: hidden;
+        height: 100%;
+        position: fixed;
+    }
+} 
+
 .iyuFSK {
     padding: 10px !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
@@ -38,7 +41,18 @@
     padding: 10px
 }
 
+.portfolio1 {
+    @include desktop {
+        margin-left:250px;
+    }
+}
+
 .header {
+    @include desktop {
+        position: fixed;
+        width: 250px;
+        left:0;
+    }
     &__top {
         display: flex;
         justify-content: space-between;
@@ -47,6 +61,11 @@
         padding-top:20px;
         @include tablet {
             padding-top: 5vw;
+        }
+        @include desktop {
+            z-index: 11;
+            position: relative;
+            padding-top: 1vw;
         }
         &--sound {
             display: flex;
@@ -65,6 +84,9 @@
         }
         &--menu {
             z-index:111;
+            @include desktop {
+                display: none;
+            }
         }
         &--slider {
             z-index:111;
@@ -86,6 +108,11 @@
         opacity: 0;
         width:100%;
         transition: opacity 0.5s 0.1s, z-index 1s 0.2s;
+        @include desktop {
+            z-index: unset;
+            opacity: unset;
+            width: 250px;
+        }
         &--top {
             display: flex;
             flex-direction: column;
@@ -95,10 +122,17 @@
             padding: 5vh 0;
             width:100%;
             box-sizing:border-box;
+            @include desktop {
+                padding: 5vh 0;
+                padding-top: 12vh;
+            }
             &__logo {
                 width:80px;
                 @include tablet {
                     width: 15vw;
+                }
+                @include desktop {
+                    width:10vh;
                 }
             }
             &__name {
@@ -139,6 +173,9 @@
                     margin-top: 5vh;
                     font-size: 2em;
                 }
+                @include desktop {
+                    font-size: 1em;
+                }
                 &--list {
                     width:100%;
                     border-bottom:1px solid #282828;
@@ -156,13 +193,19 @@
                     @include tablet {
                         width: 4vw;
                     }
+                    @include desktop {
+                        width: 2vw;
+                    }
                 }
             }
         }
     }
 }
-.mobileOpen {
-    transition: opacity 0.5s 0.2s;
-    z-index:99;
-    opacity:1;
-}
+@media screen and (max-width:1200px) {
+    .mobileOpen {
+    
+        transition: opacity 0.5s 0.2s;
+        z-index:99;
+        opacity:1;
+    }  
+} 
