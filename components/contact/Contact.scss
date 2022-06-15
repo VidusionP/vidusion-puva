@@ -1,3 +1,6 @@
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+
 .contact {
     width: 80%;
     margin: auto;
@@ -10,6 +13,23 @@
         &--input {
             background-color:#2B2B2B;
             margin: 5px 0;
+        }
+        &--section {
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__main {
+                @include tablet {
+                    width: 50%;
+                }
+            }
+            &__message {
+                @include tablet {
+                    margin-left: 10px;
+                    width: 50%;
+                }
+            }
         }
     }
     &__para {

@@ -10,6 +10,9 @@
 // .contact__form--name.Mui-focused{
 //     background-color: green;
 // }
+.help {
+    font-size:20px;
+}
 .blogs {
     width: 80%;
     margin: auto;
@@ -25,6 +28,9 @@
         @include tablet {
             font-size:20em;
             left:30%;
+        }
+        @include desktop {
+            top: 20%;
         }
         // z-index: ;
     }

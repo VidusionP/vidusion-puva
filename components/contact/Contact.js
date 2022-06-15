@@ -10,6 +10,7 @@ const useStyles = makeStyles({
 
   backgroundColor:'#2B2B2B',
   margin: '5px 0',
+  
 
 },
   input: {
@@ -99,44 +100,46 @@ export default function Contact(props) {
         <p className='html'>&lt;/p&gt;</p>
         <p className='html'>&lt;form&gt;</p>
         <form className='contact__form' onSubmit={submitEmail}>
-            <TextField
-            className={classes.textField}
-            required
-              InputLabelProps={{
-                className: classes.input,
+          <div className='contact__form--section'>
+            <div className='contact__form--section__main'>
+              <TextField
+              className={classes.textField}
+              required
+                InputLabelProps={{
+                  className: classes.input,
+                  }}
+                InputProps={{
+                  classes: {
+                    root: classes.textFieldRoot,
+                  }
                 }}
-              InputProps={{
-                classes: {
-                  root: classes.textFieldRoot,
-                }
-              }}
-              label="Name"
-              name="name"
-              onChange={handleStateChange}
-              value={mailerState.name} 
-              fullWidth 
-              autocomplete="no" 
-              variant="filled" />
-            <TextField 
-                          className={classes.textField}
-                          required
-              InputLabelProps={{
-                className: classes.input,
+                label="Name"
+                name="name"
+                onChange={handleStateChange}
+                value={mailerState.name} 
+                fullWidth 
+                autoComplete="no" 
+                variant="filled" />
+              <TextField 
+                            className={classes.textField}
+                            required
+                InputLabelProps={{
+                  className: classes.input,
+                  }}
+                InputProps={{
+                  classes: {
+                    root: classes.textFieldRoot,
+                  }
                 }}
-              InputProps={{
-                classes: {
-                  root: classes.textFieldRoot,
-                }
-              }}
-               label="Email" 
-               name="email"
-              onChange={handleStateChange}
-              value={mailerState.email} 
-              fullWidth
-              autoComplete="no" 
-              variant="filled" />
-            <TextField 
-            required
+                label="Email" 
+                name="email"
+                onChange={handleStateChange}
+                value={mailerState.email} 
+                fullWidth
+                autoComplete="no" 
+                variant="filled" />
+              <TextField 
+              required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -153,8 +156,10 @@ export default function Contact(props) {
               onChange={handleStateChange}
               value={mailerState.subject} 
               variant="filled" />
-            <TextField
-            required
+            </div>
+            <div className='contact__form--section__message'>
+              <TextField
+              required
               InputLabelProps={{
                 className: classes.input,
                 }}
@@ -163,6 +168,7 @@ export default function Contact(props) {
                   root: classes.textFieldRoot,
                 }
               }}
+              inputProps={{ className: "help" }}
               className={classes.textField}
               label="Message"
               variant="filled"
@@ -173,6 +179,8 @@ export default function Contact(props) {
               onChange={handleStateChange}
               value={mailerState.message} 
               autoComplete="new-password"/>
+            </div>
+          </div>
             <Button classes={{root: props.vidu2}} type="submit" variant="outlined">Send Message</Button>
         
         </form>
