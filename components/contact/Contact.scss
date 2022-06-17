@@ -10,6 +10,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+        @include desktop {
+            align-items:center;
+        }
         &--input {
             background-color:#2B2B2B;
             margin: 5px 0;

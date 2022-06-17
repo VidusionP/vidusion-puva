@@ -69,6 +69,9 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        @include desktop {
+            justify-content:space-around;
+        }
         &--mid {
             width: 100px;
             animation: rotation 10s linear infinite ;

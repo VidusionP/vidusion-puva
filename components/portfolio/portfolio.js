@@ -3,6 +3,14 @@ import Image from 'next/image';
 import Button from '@mui/material/Button';
 import { createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
+import vivaweb from '../../public/vivaweb.png'
+import exp from '../../public/exp.png'
+import cineyards from '../../public/cineyards.png'
+import bandsite from '../../public/bandsite.png'
+import brainflix from '../../public/brainflix.png'
+import hotair from '../../public/hotair.png'
+import lilsweets from '../../public/lilsweets.png'
+import spave from '../../public/spave.png'
 
 
 
@@ -26,14 +34,30 @@ export default function Portfolio(props) {
             <Button classes={{root: props.vidu1}} className='contact__button' variant="outlined">Contact me</Button>
         </div>
         <div className='portfolio__work'>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
-          <div className='portfolio__work--img'></div>
+          <div className='portfolio__work--img'>
+            <Image src={vivaweb}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={exp}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={cineyards}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={bandsite}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={brainflix}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={hotair}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={lilsweets}/>
+          </div>
+          <div className='portfolio__work--img'>
+            <Image src={spave}/>
+          </div>
         </div>
     </div>
   )

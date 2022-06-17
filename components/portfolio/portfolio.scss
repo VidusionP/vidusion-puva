@@ -26,8 +26,8 @@
         &--img {
             width: 50%;
             height: 50vw;
-            background-color: bisque;
-            border: 1px solid black;
+            background-color: rgb(132, 132, 132);
+            // border: 1px solid black;
         box-sizing:border-box;
             @include tablet {
                 width:25%;
