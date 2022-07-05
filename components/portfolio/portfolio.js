@@ -170,6 +170,7 @@ export default function Portfolio(props) {
               onMouseOver={() => setHoverIndex(i)}
               onMouseOut={() => setHoverIndex(null)}
               className='portfolio__work--img'
+              key={i}
                 >
               <Image id={i}  src={item.logo}/>
               <div id={i} className={cardClassname(i)}></div>
