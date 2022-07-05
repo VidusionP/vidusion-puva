@@ -11,10 +11,140 @@ import brainflix from '../../public/brainflix.png'
 import hotair from '../../public/hotair.png'
 import lilsweets from '../../public/lilsweets.png'
 import spave from '../../public/spave.png'
+import vivaweb1 from '../../public/vivaweb1.png'
+import epicon1 from '../../public/epicon1.png'
+import cineyards1 from '../../public/cineyards1.png'
+import bandsite1 from '../../public/bandsite1.png'
+import brainflix1 from '../../public/brainflix1.png'
+import hotair1 from '../../public/hotair1.png'
+import lilsweets1 from '../../public/lilsweets1.png'
+import space1 from '../../public/space1.png'
 
-
+const arr = [
+  {
+    'logo' : vivaweb,
+    'img': vivaweb1,
+    'modal': false
+  },
+  { 
+    'logo' : exp,
+    'img': epicon1
+  },
+  {
+    'logo' : cineyards,
+    'img': cineyards1
+  },
+  {
+    'logo' : bandsite,
+    'img': bandsite1
+  },
+  {
+    'logo' : brainflix,
+    'img': brainflix1
+  },
+  {
+    'logo' : hotair,
+    'img': hotair1
+  },
+  {
+    'logo' : lilsweets,
+    'img': lilsweets1
+  },
+  {
+    'logo' : spave,
+    'img': space1
+  }
+]
 
 export default function Portfolio(props) {
+  const [modal, setModal] = useState(false)
+  const [data, setData] = useState([
+    {
+      'logo' : vivaweb,
+      'img': vivaweb1,
+      'modal': false,
+      'id':0
+    },
+    { 
+      'logo' : exp,
+      'img': epicon1,
+      'modal': false,
+      'id':1
+    },
+    {
+      'logo' : cineyards,
+      'img': cineyards1,
+      'modal': false,
+      'id':2
+    },
+    {
+      'logo' : bandsite,
+      'img': bandsite1,
+      'modal': false,
+      'id':3
+    },
+    {
+      'logo' : brainflix,
+      'img': brainflix1,
+      'modal': false,
+      'id':4
+    },
+    {
+      'logo' : hotair,
+      'img': hotair1,
+      'modal': false,
+      'id':5
+    },
+    {
+      'logo' : lilsweets,
+      'img': lilsweets1,
+      'modal': false,
+      'id':6
+    },
+    {
+      'logo' : spave,
+      'img': space1,
+      'modal': false,
+      'id':7
+    }
+  ])
+  const handleChange = e => {
+
+      // console.log(count)
+      let list = e.target.id
+      let updatedList = data.map(item => {
+          if (item.id == list) {
+              return {...item, modal : true}
+          }
+          return item
+      })
+      setData(updatedList)
+  
+  };
+  const handleChange1 = e => {
+    let list = e.target.id
+      let updatedList = data.map(item => {
+          if (item.id == list) {
+              return {...item, modal : false}
+          }
+          return item
+      })
+      setData(updatedList)
+    
+  };
+  const [hoverIndex, setHoverIndex] = React.useState(null);
+  
+  const cardClassname = (index) => {
+    if (index === hoverIndex) 
+      return "portfolio__work--img__bkg goku2";
+    else if (hoverIndex ==null)
+      return "portfolio__work--img__bkg goku1";
+    else return 'portfolio__work--img__bkg goku1';
+  }
+  useEffect (() => {
+
+
+  })
   return (
     <div className='portfolio'>
         <div className='portfolio__top'>
@@ -34,30 +164,21 @@ export default function Portfolio(props) {
             <Button classes={{root: props.vidu1}} className='contact__button' variant="outlined">Contact me</Button>
         </div>
         <div className='portfolio__work'>
-          <div className='portfolio__work--img'>
-            <Image src={vivaweb}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={exp}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={cineyards}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={bandsite}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={brainflix}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={hotair}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={lilsweets}/>
-          </div>
-          <div className='portfolio__work--img'>
-            <Image src={spave}/>
-          </div>
+          {data.map((item, i) => {
+            return (
+            <div 
+              onMouseOver={() => setHoverIndex(i)}
+              onMouseOut={() => setHoverIndex(null)}
+              className='portfolio__work--img'
+                >
+              <Image id={i}  src={item.logo}/>
+              <div id={i} className={cardClassname(i)}></div>
+              <div id={i}  className={hoverIndex == i? "portfolio__work--img__pop goku1" : 'portfolio__work--img__pop'}>See More</div>
+            </div>
+            )
+            
+          })}
+          
         </div>
     </div>
   )

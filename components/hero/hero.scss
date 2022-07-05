@@ -60,6 +60,7 @@
             height:100%;
             width:35px;
             display: inline-flex;
+            
             @include tablet {
                 width:7vw;
             }

@@ -26,9 +26,12 @@
         &--img {
             width: 50%;
             height: 50vw;
+            // cursor: pointer;
             background-color: rgb(132, 132, 132);
             // border: 1px solid black;
-        box-sizing:border-box;
+            position: relative;        
+            box-sizing:border-box;
+            z-index: 111;
             @include tablet {
                 width:25%;
                 height:25vw;
@@ -37,9 +40,49 @@
                 height: 0;
                 padding-bottom: 25%;
             }
+            &__bkg {
+                background-color: rgba(0,0,0,0.6);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: background-color 1s ease-out;
+                opacity: 1;
+    transition: opacity 500ms ease, visibility 0s ease 0s;
+                
+            }
+            &__pop {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 500ms ease, visibility 0s ease 500ms;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                cursor: pointer;
+                // text-align:center;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #2FE7C6;
+            }
 
         }
     }
+}
+.goku1{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms ease, visibility 0s ease 0s;
+}
+.goku2 {
+    opacity: 0;
+    transition: opacity 500ms ease, visibility 0s ease 0s;
+
 }
 .font {
     font-family: 'Roboto', sans-serif;

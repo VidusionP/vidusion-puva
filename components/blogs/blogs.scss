@@ -38,11 +38,11 @@
         position: relative;
         display:flex;
         flex-wrap: wrap;
-        justify-content:center;
+        // justify-content:center;
         @include tablet {
             max-width: 800px;
         }
-        @media screen and (min-width: 1700px) {
+        @media screen and (min-width: 1200px) {
             max-width:unset;
         }
         &--card {
